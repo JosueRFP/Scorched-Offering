@@ -33,11 +33,11 @@ public class Boitata : MonoBehaviour
     [SerializeField] private float distanciaMinimaTeleporte = 5f;
     [SerializeField] private float distanciaMaximaTeleporte = 15f;
    
-    [Header("Teleporte Automático")]
+    [Header("Teleporte auto")]
    [SerializeField] private float intervaloTeleporteAutomatico = 6f;
 
 
-    [Header("Estado Atual")]
+    [Header("Estado Atual do boitata")]
     [SerializeField] private EstadoBoitata estadoAtual = EstadoBoitata.Escondido;
 
     private float intensidadeGlitchBase = 0.09f;

@@ -3,11 +3,11 @@ using UnityEngine.UI;
 using TMPro;
 public class BatteryUI : MonoBehaviour
 {
-    [Header("Referências Visuais")]
+    [Header("Referência")]
     [SerializeField] private Image batteryImage;
     [SerializeField] private TextMeshProUGUI batteryText;
 
-    [Header("Fonte de Dados")]
+    [Header("Fonte")]
     [SerializeField] private BatterySystem batterySystem;
 
     void Update()

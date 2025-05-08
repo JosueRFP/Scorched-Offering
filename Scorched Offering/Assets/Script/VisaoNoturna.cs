@@ -3,20 +3,20 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 public class VisaoNoturna : MonoBehaviour
 {
-    [Header("Tecla de Ativação")]
+    [Header("Ativação")]
     [SerializeField] private KeyCode toggleNightVisionKey = KeyCode.R;
 
     [Header("Pós-processamento")]
     [SerializeField] private Volume nightVisionVolume;
 
-    [Header("Elementos Visuais")]
+    [Header("Animaçao de piscar")]
     [SerializeField] private GameObject recordingIcon;
     [SerializeField] private GameObject textRec;
 
     [Header("Referências")]
     [SerializeField] private BatterySystem batterySystem;
 
-    [Header("Configuração do Piscar")]
+    [Header("Tempo para piscar")]
     [SerializeField] private float blinkInterval = 0.5f;
 
     private float blinkTimer = 0f;
