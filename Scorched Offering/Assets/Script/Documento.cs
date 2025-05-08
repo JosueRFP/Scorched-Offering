@@ -42,7 +42,7 @@ public class Documento : MonoBehaviour
     void Update()
     {
        if (jogadorPerto && Input.GetButtonDown("Fire1") && !painelDialogo.activeSelf)
-        { 
+       { 
 
 
             AbrirDocumento();
@@ -50,7 +50,7 @@ public class Documento : MonoBehaviour
                 escurecer.enabled = true;
             Time.timeScale = 0f;
             
-        }
+       }
         
         else if (painelDialogo.activeSelf && Input.GetKeyDown(KeyCode.Escape))
         {
@@ -68,10 +68,6 @@ public class Documento : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             jogadorPerto = true;
-            
-           
-             
-           
         }
     }
     private void OnTriggerExit(Collider other)
