@@ -88,14 +88,15 @@ public class Documento : MonoBehaviour
         painelDialogo.SetActive(true);
         textoDialogo.gameObject.SetActive(true);
         textoDialogo.text = escritaDocumento;
+        Destroy(gameObject);
     }
 
     private void FecharDocumento()
     {
+        pageNum = +1;
         painelDialogo.SetActive(false);
         textoDialogo.gameObject.SetActive(false);
-        pageNum += 1;
-        Destroy(gameObject);
+       
     }
 }
 
