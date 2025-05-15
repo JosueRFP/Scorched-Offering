@@ -10,7 +10,7 @@ public abstract class InventoryController : MonoBehaviour
     [SerializeField] GameObject inventoryPainel = null; // O inventário tem um valor nulo
     
     
-    KeyCode openInventory = KeyCode.Q; // Botão que abre o inventário
+    public KeyCode openInventory = KeyCode.Q; // Botão que abre o inventário
 
     void Awake()
     {        
@@ -20,8 +20,10 @@ public abstract class InventoryController : MonoBehaviour
 
     void Update()
     {
+        print("está na cena");
         if(Input.GetKeyDown(openInventory)) // quando se aperta o botão "Q" o inventário abre e o tempo para
         {
+            print("foi");
             inventoryPainel.SetActive(true);
             Time.timeScale = 0f;
         }

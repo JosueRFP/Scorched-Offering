@@ -96,12 +96,12 @@ public class VisaoNoturna : MonoBehaviour
         }
     }
       public bool EstaComVisaoNoturna()
-  {
-    return nightVisionOn;
-  }
+      {
+        return nightVisionOn;
+      }
     public void RecarregarBateria(float valor)
-   {
-    if (batterySystem != null)
+    {
+        if (batterySystem != null)
         batterySystem.Recharge(valor);
-   }
+    }
 }
