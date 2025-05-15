@@ -17,7 +17,7 @@ public class Item
 
     void Start()
     {
-        bateryQtd = 1;
+        bateryQtd = 1;// a quantidade de baterias começa em 1
     }
 
     public void DescartItem()// função para descartar o item
@@ -27,11 +27,7 @@ public class Item
 
     public void UseItem() // função para uzar o item
     {
-        if(Input.GetMouseButtonDown(bateryQtd))
-        {
-            bateryQtd--;
-            
-        }
+        
     }
 
 
@@ -42,10 +38,8 @@ public abstract class InventoryController : MonoBehaviour
 {
     
     [SerializeField] GameObject inventoryPainel = null; // O inventário tem um valor nulo
-     
     
-
-    int qtdOfItens;// quantidade dos itens a ser mostrada
+    Item item;
     KeyCode openInventory = KeyCode.Q; // Botão que abre o inventário
 
     void Awake()

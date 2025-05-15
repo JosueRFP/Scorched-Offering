@@ -188,6 +188,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 521441336388255049, guid: 7fc4185d68c484944a3ce4d5affb9399, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 521441336388255049, guid: 7fc4185d68c484944a3ce4d5affb9399, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5943396
+      objectReference: {fileID: 0}
+    - target: {fileID: 521441336388255049, guid: 7fc4185d68c484944a3ce4d5affb9399, type: 3}
+      propertyPath: m_Color.g
+      value: 0.44577596
+      objectReference: {fileID: 0}
+    - target: {fileID: 521441336388255049, guid: 7fc4185d68c484944a3ce4d5affb9399, type: 3}
+      propertyPath: m_Color.r
+      value: 0.019624433
+      objectReference: {fileID: 0}
+    - target: {fileID: 521441336388255049, guid: 7fc4185d68c484944a3ce4d5affb9399, type: 3}
+      propertyPath: m_ColorTemperature
+      value: 19585
+      objectReference: {fileID: 0}
+    - target: {fileID: 521441336388255049, guid: 7fc4185d68c484944a3ce4d5affb9399, type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1936013520554851478, guid: 7fc4185d68c484944a3ce4d5affb9399, type: 3}
       propertyPath: m_Name
       value: Directional light
