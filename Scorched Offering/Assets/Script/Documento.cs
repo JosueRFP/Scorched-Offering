@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class Documento : MonoBehaviour
 {
@@ -21,7 +22,8 @@ public class Documento : MonoBehaviour
     [Header("Pos-Pocessamento")]
     [SerializeField] Volume escurecer;
 
-     
+    [Header("WinCon")]
+    int pageNum;
 
     
     
@@ -41,6 +43,10 @@ public class Documento : MonoBehaviour
 
     void Update()
     {
+       if (pageNum == 3)
+        {
+            SceneManager.LoadScene("End");
+        }
        if (jogadorPerto && Input.GetButtonDown("Fire1") && !painelDialogo.activeSelf)
        { 
 
@@ -49,10 +55,9 @@ public class Documento : MonoBehaviour
             if(escurecer != null)
                 escurecer.enabled = true;
             Time.timeScale = 0f;
-            
        }
         
-        else if (painelDialogo.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        else if (painelDialogo.activeSelf && Input.GetButtonDown("Fire2"))
         {
             FecharDocumento();
             if (escurecer != null)
@@ -83,14 +88,14 @@ public class Documento : MonoBehaviour
         painelDialogo.SetActive(true);
         textoDialogo.gameObject.SetActive(true);
         textoDialogo.text = escritaDocumento;
-     
-       
     }
 
     private void FecharDocumento()
     {
         painelDialogo.SetActive(false);
         textoDialogo.gameObject.SetActive(false);
+        pageNum += 1;
+        Destroy(gameObject);
     }
 }
 
