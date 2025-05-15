@@ -1,4 +1,3 @@
-using UnityEngine;
 
 public interface ISelectItem  //interface de selecionar os itens
 {

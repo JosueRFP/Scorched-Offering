@@ -8,9 +8,5 @@ public class Inventory : InventoryController
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
