@@ -43,7 +43,7 @@ public class Documento : MonoBehaviour
 
     void Update()
     {
-       if (pageNum == 3)
+       if (pageNum == 4)
         {
             SceneManager.LoadScene("End");
         }
