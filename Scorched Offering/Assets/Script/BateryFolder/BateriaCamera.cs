@@ -1,14 +1,13 @@
 using UnityEngine;
 
-public class BateriaCamera : MonoBehaviour
-
+public class BateriaCamera : BateryManeger
 {
-    
     [Header("Quantos vai carregar a visao noturna")]
     [SerializeField] private float rechargeAmount = 25f;
-    
-    [Header("ReferÃªncia a VisaoNoturna")]
+
+    [Header("Referência a VisaoNoturna")]
     [SerializeField] private VisaoNoturna cameraMecanicas;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,7 +16,6 @@ public class BateriaCamera : MonoBehaviour
             if (cameraMecanicas != null)
             {
                 cameraMecanicas.RecarregarBateria(rechargeAmount);
-                Destroy(gameObject);
             }
         }
     }

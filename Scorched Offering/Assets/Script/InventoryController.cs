@@ -3,43 +3,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class Item 
-{
-    [SerializeField] Image icon; // sprite dos coletáveis
-    [SerializeField] int bateryQtd; // quantidade de baterias
-   
-    public Item(string name, Image icon, int bateryQtd)
-    {
-        this.icon = icon; //instancia atual da variavel
-        this.bateryQtd = bateryQtd;//instancia atual da variavel
-    }
-
-    void Start()
-    {
-        bateryQtd = 1;// a quantidade de baterias começa em 1
-    }
-
-    public void DescartItem()// função para descartar o item
-    {
-
-    }
-
-    public void UseItem() // função para uzar o item
-    {
-        
-    }
-
-
-
-}
 
 public abstract class InventoryController : MonoBehaviour
 {
     
     [SerializeField] GameObject inventoryPainel = null; // O inventário tem um valor nulo
     
-    Item item;
+    
     KeyCode openInventory = KeyCode.Q; // Botão que abre o inventário
 
     void Awake()

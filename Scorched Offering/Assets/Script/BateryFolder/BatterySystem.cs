@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BatterySystem : MonoBehaviour
+public class BatterySystem : BateryManeger
 {
     [Header("Configuração da Bateria")]
     [SerializeField] private float maxBattery = 100f;
@@ -48,11 +48,11 @@ public class BatterySystem : MonoBehaviour
         currentBattery = Mathf.Clamp(currentBattery, 0f, maxBattery);
     }
 
-   private bool IsDraining()
-{
-    return visaoNoturna != null && visaoNoturna.EstaComVisaoNoturna();
-}
-   public float GetBattery()
+    private bool IsDraining()
+    {
+        return visaoNoturna != null && visaoNoturna.EstaComVisaoNoturna();
+    }
+    public float GetBattery()
     {
         return currentBattery;
     }

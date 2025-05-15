@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class BatteryUI : MonoBehaviour
+public class BatteryUI : BateryManeger
 {
-    [Header("ReferÃªncia")]
+
+    [Header("Referência")]
     [SerializeField] private Image batteryImage;
     [SerializeField] private TextMeshProUGUI batteryText;
 
