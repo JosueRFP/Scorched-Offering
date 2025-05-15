@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum PlayStates
 {
@@ -9,8 +10,10 @@ public abstract class InventoryController : MonoBehaviour
 {
     
     [SerializeField] GameObject inventoryPainel = null; // O inventário tem um valor nulo
-    [SerializeField]  PlayStates playStates = PlayStates.PLAYING;
-    public PlayStates State { get => playStates; set => playStates = value; }
+    [SerializeField]  PlayStates _playStates = PlayStates.PLAYING;
+
+    public UnityEvent OnInventory, OnPlay;
+    public PlayStates State { get => _playStates; set => _playStates = value; }
 
     
     void Awake()
@@ -32,16 +35,21 @@ public abstract class InventoryController : MonoBehaviour
         }
     }
 
-    public IEnumerator States()
+    public void States()
     {
-        
-        
-            switch (playStates)
-            {
-                case PlayStates.INVENTORY:
 
-                    break;
-            }
-        
+        switch (_playStates)
+        {
+             case PlayStates.INVENTORY:
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = true;
+                break;
+                       
+            case PlayStates.PLAYING:
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                break;
+        }
+
     }
 }
