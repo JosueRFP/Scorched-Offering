@@ -715,7 +715,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPainel: {fileID: 93231712}
-  openInventory: 113
 --- !u!4 &802939636
 Transform:
   m_ObjectHideFlags: 0

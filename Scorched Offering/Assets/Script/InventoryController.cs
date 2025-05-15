@@ -1,17 +1,18 @@
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
-
+public enum PlayStates
+{
+    INVENTORY, PLAYING
+}
 public abstract class InventoryController : MonoBehaviour
 {
     
     [SerializeField] GameObject inventoryPainel = null; // O inventário tem um valor nulo
-    
-    
-    public KeyCode openInventory = KeyCode.Q; // Botão que abre o inventário
+    [SerializeField]  PlayStates playStates = PlayStates.PLAYING;
+    public PlayStates State { get => playStates; set => playStates = value; }
 
+    
     void Awake()
     {        
         inventoryPainel.SetActive(false);// o inventario começa desativado
@@ -20,20 +21,27 @@ public abstract class InventoryController : MonoBehaviour
 
     void Update()
     {
-        print("está na cena");
-        if(Input.GetKeyDown(openInventory)) // quando se aperta o botão "Q" o inventário abre e o tempo para
-        {
-            print("foi");
+        
+        if(Input.GetKeyDown(KeyCode.Q)) // quando se aperta o botão "Q" o inventário abre 
+        {            
             inventoryPainel.SetActive(true);
-            Time.timeScale = 0f;
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) // quando se aperta o botão "ESC" o inventário fecha e o tempo volta ao normal
+        if (Input.GetKeyDown(KeyCode.Escape)) // quando se aperta o botão "ESC" o inventário fecha 
         {
             inventoryPainel.SetActive(false);
-            Time.timeScale = 1f;
         }
     }
 
-    
+    public IEnumerator States()
+    {
+        
+        
+            switch (playStates)
+            {
+                case PlayStates.INVENTORY:
 
+                    break;
+            }
+        
+    }
 }

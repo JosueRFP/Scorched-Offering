@@ -17,6 +17,7 @@ public class SelectItem : MonoBehaviour, ISelectItem // interface de selecionar 
     public void UseItem(int itenQtd)// função diretamente da interface
     {
         OnUse.Invoke();// invoca o evento 
+        OnMouseDown();
         if (bateryQtd == 0)// se a quantidade for igual a zero
         {
             bateryBTN.SetActive(false);
@@ -36,10 +37,11 @@ public class SelectItem : MonoBehaviour, ISelectItem // interface de selecionar 
         
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
-        if (bateryBTN)
+        if (bateryBTN == true)
         {
+            print("fuinciona");
             UseItem(itensToConsume - bateryQtd);
         }
         
