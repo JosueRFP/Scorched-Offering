@@ -6,10 +6,10 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Item 
 {
-    [SerializeField] Sprite icon; // sprite dos coletáveis
+    [SerializeField] Image icon; // sprite dos coletáveis
     [SerializeField] int bateryQtd; // quantidade de baterias
    
-    public Item(string name, Sprite icon, int bateryQtd)
+    public Item(string name, Image icon, int bateryQtd)
     {
         this.icon = icon; //instancia atual da variavel
         this.bateryQtd = bateryQtd;//instancia atual da variavel
@@ -27,7 +27,11 @@ public class Item
 
     public void UseItem() // função para uzar o item
     {
-
+        if(Input.GetMouseButtonDown(bateryQtd))
+        {
+            bateryQtd--;
+            
+        }
     }
 
 
