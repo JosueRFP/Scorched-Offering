@@ -24,6 +24,7 @@ public class Documento : MonoBehaviour
 
     [Header("WinCon")]
     int pageNum;
+    int pageNumWin = 4;
 
     
     
@@ -43,14 +44,14 @@ public class Documento : MonoBehaviour
 
     void Update()
     {
-       if (pageNum == 4)
+       if (pageNum == pageNumWin)
         {
             SceneManager.LoadScene("End");
         }
        if (jogadorPerto && Input.GetButtonDown("Fire1") && !painelDialogo.activeSelf)
-       { 
+       {
 
-
+            pageNum += 1;
             AbrirDocumento();
             if(escurecer != null)
                 escurecer.enabled = true;
@@ -93,10 +94,8 @@ public class Documento : MonoBehaviour
 
     private void FecharDocumento()
     {
-        pageNum = +1;
         painelDialogo.SetActive(false);
         textoDialogo.gameObject.SetActive(false);
-       
     }
 }
 

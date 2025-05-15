@@ -12129,7 +12129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230118626536680469, guid: 342e3f8f80901e54da1889728e16310a, type: 3}
       propertyPath: m_Name
-      value: DocumentoFDS
+      value: DocumentoFDS (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4719467689068509531, guid: 342e3f8f80901e54da1889728e16310a, type: 3}
       propertyPath: missao
@@ -17899,7 +17899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &868244674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18278,7 +18278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cfc7596704bbd7f489156fcd4c05c7e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 120.31
+      value: 120.28
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cfc7596704bbd7f489156fcd4c05c7e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23433,6 +23433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPainel: {fileID: 622895297}
+  openInventory: 113
 --- !u!4 &1215316294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4521638005934597624, guid: d3162e1fc80e8b440b3ef10304f18b36, type: 3}
@@ -24324,7 +24325,7 @@ PrefabInstance:
       objectReference: {fileID: 1019619747}
     - target: {fileID: 1636525706331693499, guid: 342e3f8f80901e54da1889728e16310a, type: 3}
       propertyPath: escritaDocumento
-      value: "<b>A Amea\xE7a aparece? - 3 de novembro de 2006\n \nUm de nossos alde\xF5es
+      value: "<b>A Amea\xE7a aparece? - 22 de outubro de 2006\n \nUm de nossos alde\xF5es
         disse que ele viu uma criatura andando em nossa floresta, uma serpente flamejante,
         ser\xE1 essa a criatura que estava nos causando tanto tormento? N\xF3s decidimos
         chama-lo de Boitat\xE1, e n\xE3o sabemos com certeza se a criatura sequer
